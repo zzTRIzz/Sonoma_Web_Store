@@ -1,0 +1,8 @@
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (1, N'SPCT001', 1, 1, 1, N'spct1.jpg', 100, 500000, 1);
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (2, N'SPCT002', 2, 2, 2, N'spct2.jpg', 200, 600000, 1);
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (3, N'SPCT003', 3, 3, 3, N'spct3.jpg', 300, 700000, 1);
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (4, N'SPCT004', 4, 4, 4, N'spct4.jpg', 400, 800000, 1);
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (5, N'SPCT005', 5, 5, 5, N'spct5.jpg', 500, 900000, 1);
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (6, N'SPCT006', 1, 2, 2, N'spct6.jpg', 500, 900000, 1);
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (8, N'asdsa', 1, 3, 2, N'assa', 213, 200, 1);
+INSERT INTO asm_java5.dbo.SanPhamCT (id, maSPCT, idSanPham, idMauSac, idKichThuoc, hinhAnh, soLuong, gia, trangThai) VALUES (9, N'asdsd', 1, 2, 1, N'assa', 213, null, 0);

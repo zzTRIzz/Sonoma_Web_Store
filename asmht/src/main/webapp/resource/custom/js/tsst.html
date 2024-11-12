@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Cards</title>
+    <!-- Link tới Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-app="myApp">
+
+    <div class="container" ng-controller="cardCtrl">
+        <h1 class="mt-5">Danh sách điện thoại</h1>
+        <div class="row mt-3">
+            <div class="col-lg-4 col-md-6 mb-4" ng-repeat="p in phone">
+                <div class="card h-100">
+                    <img src="{{ p.img }}" class="card-img-top" alt="{{ p.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ p.name }}</h5>
+                        <p class="card-text">Giá: {{ p.price }}</p>
+                        <p class="card-text">Giá cũ: {{ p.old }}</p>
+                        <p class="card-text">Giảm giá: {{ p.reduce }}%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="controller.js"></script>
+    <!-- Link tới Bootstrap JS và AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+.figtree {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.source-sans-3 {
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.baloo-2 {
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.plus-jakarta-sans{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+.only-plus-jakarta-sans{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
