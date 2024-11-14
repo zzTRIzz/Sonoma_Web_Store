@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" name="image" id="imageInput">
+    <p id="filePath"></p>
+    <img src="file:///C:/fakepath/Ảnh%20chụp%20màn%20hình%202024-06-06%20202710.png" alt="">
+
+
+    <script>
+        document.getElementById('imageInput').addEventListener('change', function(event) {
+            var fileInput = event.target;
+            var filePath = fileInput.value; // Đường dẫn của file
+            document.getElementById('filePath').textContent = filePath;
+        });
+    </script>
+</body>
+</html>

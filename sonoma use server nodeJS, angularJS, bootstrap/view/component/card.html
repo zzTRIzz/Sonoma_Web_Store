@@ -1,0 +1,35 @@
+ <!-- card -->
+ <div class="container" >
+    <div
+        class="row d-flex justify-content-between row-cols-lg-5">
+        <div ng-repeat="p in phone" class="col mb-3">
+            <a href="#!product/{{p.id}}" style="text-decoration: none;">
+                <div class="card css-card max-w-sm border-0 h-100">
+                    <h6
+                        class="css-giamgia d-flex justify-content-center p-1">Giảm
+                        đến {{p.reduce.toLocaleString()}}%</h6>
+                    <div class="card-body">
+                        <div class="w-100"
+                            style="width: 204.79px; height: 177px;">
+                            <img ng-src="{{p.img[0]}}" alt="{{p.name}}"
+                                class="w-100 img-css p-2">
+                        </div>
+                        <p class="card-title"
+                            style="height: 60px; font-size: 15px; font-weight: bold;">{{p.name}}</p>
+                        <p
+                            class="css-moneys align-content-center">
+                            {{p.price.toLocaleString()}}đ
+                            <span>{{p.old | number:0}}đ</span></p>
+                        <div
+                            ng-bind-html="renderHtml(p.rate_star)">
+                        </div>
+                        <button href="./pay.html" class="btn w-100 btnGioHangHTML mt-4">
+                            Thêm vào giỏ hàng
+                        </button>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</div>

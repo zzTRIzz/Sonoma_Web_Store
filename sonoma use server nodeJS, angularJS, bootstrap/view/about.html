@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-bg-success-subtle {
+            background-color: var(--bs-success-bg-subtle);
+            color: var(--bs-success-text-emphasis);
+        }
+
+        fa fa-star {
+            size: 5px;
+        }
+
+        .checked {
+            color: rgb(245, 158, 11);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resource/custom/css/font.css">
+    <link rel="stylesheet" href="../resource/custom/css/icon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body ng-app="myApp" style="background-color: rgb(245, 245, 247);" class="only-plus-jakarta-sans">
+    <!-- rgb(233, 236, 239) -->
+
+
+    <div class="container mt-4">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg> -->
+                <span class="fs-4">Về chúng tôi</span>
+            </a>
+        </header>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Sonoma - Cửa hàng mua sắm trực tuyến mới thành lập 2024</h1>
+                <p class="fs-5  mt-5 mb-5" style="text-align: justify;">
+                    Chào mừng bạn đến với Sonoma - cửa hàng online chuyên cung cấp các sản phẩm điện thoại, laptop
+                    và máy tính bảng chính hãng với đa dạng mẫu mã, giá cả cạnh tranh và dịch vụ khách hàng tận tâm.
+                    Chúng tôi luôn mong muốn mang đến cho khách hàng những trải nghiệm mua sắm tuyệt vời nhất.
+                </p>
+                <div class="mb-5">
+                    <a href="./index.html" class="btn btn-primary btn-lg px-4">Truy cập trang chủ</a>
+                </div>
+            </div>
+
+            <div class="col-md-4"><img src="../resource/logo/logofillfinal.png" alt="" class="w-100"></div>
+        </div>
+        <!-- <hr> -->
+
+        <div class="row g-5">
+            <div class="container px-4 py-5" id="featured-3">
+                <h2 class="pb-2 border-bottom"></h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3" style="text-align: justify;">
+                    <div class="feature col">
+                        <h2>Uy tín</h2>
+                        <p>Sonoma được thành lập bởi đội ngũ đam mê công nghệ với nhiều năm kinh nghiệm trong lĩnh vực
+                            bán lẻ điện tử. Chúng tôi cam kết mang đến cho khách hàng những sản phẩm chính hãng, chất
+                            lượng cao cùng dịch vụ chuyên nghiệp.</p>
+                    </div>
+                    <div class="feature col">
+                        <h2>Sản phẩm đa dạng</h2>
+                        <p>Sonoma cung cấp đầy đủ các dòng điện thoại, laptop và máy tính bảng mới nhất từ các thương
+                            hiệu nổi tiếng như Apple, Samsung, Oppo, Vivo, Asus, Acer, Dell, HP,... đáp ứng mọi nhu cầu
+                            và sở thích của khách hàng.</p>
+                        <!-- <a href="#" class="icon-link">
+                          Call to action
+                          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+                        </a> -->
+                    </div>
+                    <div class="feature col">
+                        <h2>Dịch vụ tận tâm</h2>
+                        <p>Sonoma sở hữu đội ngũ nhân viên tư vấn chuyên nghiệp, am hiểu sản phẩm luôn sẵn sàng hỗ trợ
+                            khách hàng lựa chọn được sản phẩm phù hợp nhất. Chúng tôi cũng cung cấp dịch vụ giao hàng
+                            miễn phí toàn quốc và bảo hành chính hãng cho tất cả các sản phẩm.</p>
+                        <!-- <a href="#" class="icon-link">
+                          Call to action
+                          <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+        </script>
+    <script src="../resource/custom/js/controller.js"></script>
+
+</body>
+
+</html>

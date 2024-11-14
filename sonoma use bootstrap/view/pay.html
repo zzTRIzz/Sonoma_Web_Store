@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <style>
+        .custom-bg-success-subtle {
+            background-color: var(--bs-success-bg-subtle);
+            color: var(--bs-success-text-emphasis);
+        }
+
+        .checked {
+            color: rgb(245, 158, 11);
+        }
+
+        .breadcrumb-item {
+            font-size: 12px;
+        }
+
+        .breadcrumb-item a {
+            text-decoration: none;
+            color: rgb(112, 112, 112);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../resource/custom/css/font.css">
+    <!-- <link rel="stylesheet" href="../resource/custom/css/icon.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body ng-app="myApp" style="background-color: rgb(245, 245, 247);" class="only-plus-jakarta-sans">
+    <nav class="navbar navbar-expand-md navbar-light w-100 baloo-2 sticky-top"
+        style="background-color: rgb(245, 245, 247);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="../resource/logo/logofill.png" alt="Logo" width="34" height="34"
+                    class="d-inline-block align-text-top me-2">
+                <span style="display: inline-block; vertical-align: middle; color: rgb(236, 132, 41);"
+                    class="fw-bold fs-5">Sonoma</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mx-3 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html"><img src="../resource/icon/store25.svg" alt class="mb-1"> Về cửa
+                            hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html"><img src="../resource/icon/phone25fill.svg" alt class="mb-1"> Liên
+                            hệ</a>
+                    </li>
+                    <li class="nav-item shadow-lg rounded-5 me-3 mx-2 ">
+                        <a class="nav-link" href="./cart.html"><img src="../resource/icon/cart25fill.svg" alt
+                                class="mb-1"> Giỏ hàng</a>
+                    </li>
+                </ul>
+                <form class="d-flex justify-content-center" role="search">
+                    <button type="button" class="btn custom-bg-success-subtle" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                        <img src="../resource/icon/account.svg" class="mb-1"> Đăng nhập
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-xl mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Thanh toán</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- <div class="container-md mt-4">
+        <h4>Thông tin thanh toán</h4>
+        <div class="row">
+            <div class="col-md-8">
+                <form>
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Họ và tên</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Nhập email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Số điện thoại</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Địa chỉ giao hàng</label>
+                        <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+                    </div>
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Ghi chú</label>
+                        <textarea class="form-control" id="notes" rows="3" placeholder="Nhập ghi chú (nếu có)"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tóm tắt đơn hàng</h5>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Tổng tạm tính</p>
+                            <p class="card-text">33.490.000đ</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Thành tiền</p>
+                            <p class="card-text fw-bolder" style="color: rgb(212, 83, 32);">33.490.000đ</p>
+                        </div>
+                        <a href="#" class="btn btn-primary w-100">Xác nhận thanh toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="container mt-5">
+        <!-- <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <h2>Hình thức thanh toán</h2>
+            <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+          </div> -->
+
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Giỏ hàng</span>
+                    <span class="badge bg-primary rounded-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">iPhone 15 Pro</h6>
+                            <small class="text-muted">256GB ,Đen</small>
+                        </div>
+                        <span class="text-muted">19.900.000đ</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">iPhone 13</h6>
+                            <small class="text-muted">128GB, Hồng</small>
+                        </div>
+                        <span class="text-muted">13.590.000đ</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Voucher</h6>
+                            <small>B5SMP2D</small>
+                        </div>
+                        <span class="text-success">−40.000đ</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Tổng tiền (VND)</span>
+                        <strong>33.450.000đ</strong>
+                    </li>
+                </ul>
+
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Voucher code">
+                        <button type="submit" class="btn btn-secondary">Áp dụng</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h5 class="mb-3 fw-bold">Thanh toán</h5>
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-12">
+                            <label for="firstName" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Valid first name is required.
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <label for="username" class="form-label">Số điện thoại</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">SDT</span>
+                                <input type="tel" class="form-control" id="username" placeholder="084XXXXXXX" required>
+                                <div class="invalid-feedback">
+                                    Your phone is required.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email <span class="text-muted">(Tùy
+                                    chọn)</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="you@gmail.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="address" class="form-label">Địa chỉ nhận hàng</label>
+                            <input type="text" class="form-control" id="address" placeholder="Ngõ ..., Phường ..."
+                                required>
+                            <div class="invalid-feedback">
+                                Please enter your shipping address.
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-5">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country" required>
+                      <option value="">Choose...</option>
+                      <option>United States</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid country.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>California</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="zip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Zip code required.
+                    </div>
+                  </div> -->
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="same-address">
+                        <label class="form-check-label" for="same-address">Tôi đồng ý chấp thuận mọi điều khoản giao
+                            dịch từ Sonoma</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="same-address">
+                        <label class="form-check-label" for="same-address">Địa chỉ giao hàng giống với địa chỉ thanh
+                            toán của tôi</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="save-info">
+                        <label class="form-check-label" for="save-info">Lưu thông tin thanh toán này cho lần sau</label>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h5 class="mb-3 fw-bolder">Hình thức thanh toán </h5>
+
+                    <div class="my-3">
+                        <div class="form-check">
+                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
+                                required>
+                            <label class="form-check-label" for="credit">Thanh toán khi nhận hàng</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="debit">Thanh toán bằng ngân hàng ( Online )</label>
+                        </div>
+                        <!-- <div class="form-check">
+                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                    <label class="form-check-label" for="paypal">PayPal</label>
+                  </div> -->
+                    </div>
+
+                    <!-- <div class="row gy-3">
+                  <div class="col-md-6">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-6">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                    <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div> -->
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg mb-5" type="submit">Tiếp tục thanh toán</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../resource/custom/js/angular.min.js"></script>
+    <script src="../resource/custom/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

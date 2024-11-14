@@ -1,0 +1,147 @@
+<nav
+            class="navbar navbar-expand-md navbar-light w-100 baloo-2 sticky-top"
+            style="background-color: rgb(245, 245, 247);">
+            <div class="container-fluid">
+                <a class="navbar-brand " href="#">
+                </a>
+                <a class="navbar-brand" href="./index.html">
+                    <img src="../resource/logo/logofill.png" alt="Logo"
+                        width="34" height="34"
+                        class="d-inline-block align-text-top me-2">
+                    <span
+                        style="display: inline-block; vertical-align:middle; color: rgb(236, 132, 41);"
+                        class="fw-bold fs-5">Sonoma</span>
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mx-3 align-items-center">
+                        <li class="nav-item">
+                            <button class="btn shadow-lg rounded-5 mx-1 danhmuc"
+                                type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithBothOptions"
+                                aria-controls="offcanvasWithBothOptions">
+                                <img src="../resource/icon/bars24.svg" class alt
+                                    style="margin-bottom: 2px;">
+                                Danh mục
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="col m-1">
+                        <div
+                            class="input-group position-relative d-flex justify-content-center">
+                            <!-- Thêm class d-flex và justify-content-center -->
+                            <input
+                                class="form-control rounded-pill search form-outline pl-5 shadow-lg rounded-5"
+                                type="search"
+                                placeholder="     Bạn cần tìm gì ?"
+                                aria-label="Search">
+                            <i
+                                class="fa-light fa fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-2"></i>
+                        </div>
+                    </div>
+
+                    <ul class="navbar-nav me-auto mx-1 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!about">
+                                <img src="../resource/icon/store25.svg" alt
+                                    class="mb-1">
+                                Về cửa hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!contact">
+                                <img src="../resource/icon/phone25fill.svg" alt
+                                    class="mb-1">
+                                Liên hệ
+                            </a>
+                        </li>
+                        <li class="nav-item shadow-lg rounded-5 me-3 mx-2 ">
+                            <a class="nav-link" href="#!cart">
+                                <img src="../resource/icon/cart25fill.svg" alt
+                                    class="mb-1">Giỏ hàng
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Đăng nhập -->
+                    <form class="d-flex justify-content-center m-1" role="search">
+                        <button type="button"
+                            class="btn custom-bg-success-subtle"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"
+                            data-bs-whatever="@mdo">
+                            <div class="pt-1">
+                                <img src="../resource/icon/account.svg"
+                                class="mb-1" >
+                            Đăng nhập
+                            </div>
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+<!-- Đăng nhập -->
+        <div class="modal fade" id="exampleModal" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                            <div class="d-flex justify-content-center m-3 mb-4">
+                                <h5 class="modal-title" id="exampleModalLabel">Đăng nhập vào <span style="color: rgb(235, 137, 81);" class="fw-semibold">Sonoma</span></h5>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control"
+                                    id="floatingInput"
+                                    placeholder="Email hoặc số điện thoại">
+                                <label for="floatingInput">( Sử dụng email / Số điện thoại )</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control"
+                                    id="floatingPassword"
+                                    placeholder="Mật khẩu">
+                                <label
+                                    for="floatingPassword">Mật khẩu</label>
+                            </div>
+
+                            <div class="form-check mt-md-3 mb-md-2">
+                                <input type="checkbox"
+                                    class="form-check-input"
+                                    id="dropdownCheck" style="background-color: rgb(235, 137, 81);">
+                                <label class="form-check-label"
+                                    for="dropdownCheck">
+                                    Ghi nhớ tài khoản
+                                </label>
+                            </div>
+                            <div class="container d-flex justify-content-center">
+                                <img src="https://cdn-icons-png.flaticon.com/128/281/281764.png" width="25px" height="25px" alt="" class="mx-2">
+                                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"  width="25px" height="25px" alt="" class="mx-2">
+                            </div>
+                            
+                            <a
+                                class="dropdown-item mt-3 text-muted text-sm-center"
+                                href="#!account/register">Bạn chưa có tài khoản? <span style="color: rgb(215, 109, 47);" data-bs-dismiss="modal">Đăng ký</span></a>
+                            <a
+                                class="dropdown-item mt-3 text-muted text-sm-center"
+                                href="#">Quên mật khẩu?</a>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Hủy</button>
+                        <button type="button" class="btn btn-primary btnDangNhap" >Đăng
+                            nhập</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        

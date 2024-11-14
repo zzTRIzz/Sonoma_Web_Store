@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone List</title>
+</head>
+
+<body ng-controller="myCtrl">
+    <h2>Phone List</h2>
+    <ul>
+        <li ng-repeat="item in mergedItems">
+            {{ item.name }} - {{ item.price }}
+        </li>
+    </ul>
+    <!-- AngularJS core JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('myCtrl', function ($scope, $http) {
+            // Lấy dữ liệu từ tệp JSON
+
+        
+            $http.get('http://localhost:3000/prods')
+                .then(function (response) {
+                    var data = response.data[0] || {}; // Lấy phần tử đầu tiên của mảng
+                    var phones = data.phone || []; // Sử dụng thuộc tính phone từ đối tượng data
+                    var laptops = data.laptop || []; // Sử dụng thuộc tính laptop từ đối tượng data
+                    $scope.mergedItems = phones.concat(laptops);
+                    console.log(response.data);
+
+                })
+                .catch(function (error) {
+                    console.error('Error fetching data:', error);
+                });
+
+        });
+    </script>
+</body>
+
+</html>

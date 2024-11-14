@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <h3 class="fw-bold mb-4">Quản lý sản phẩm</h3>
+  <form action="">
+    <div class="row w-75">
+      <div class="mb-3 mt-3 col-5">
+        <label for="" class="form-label">Tên sản phẩm</label>
+        <input type="text" class="form-control" placeholder="" ng-model="name">
+      </div>
+      <div class="mb-3 mt-3 col-7">
+        <label for="" class="form-label">Loại sản phẩm</label>
+        <select class="form-select" aria-label="Default select example" ng-model="loaiSP" ng-change="onChangeLoaiSP()">
+          <option selected>Chọn loại sản phẩm</option>
+          <option value="Điện thoại 1">Điện thoại</option>
+          <option value="Máy tính bảng 2">Máy tính bảng</option>
+          <option value="Laptop 3">Laptop</option>
+        </select>
+      </div>
+      <div class="mb-3 mt-3 col-5">
+        <label for="" class="form-label">Giá mới</label>
+        <input type="number" class="form-control" placeholder="" ng-model="price" ng-change="onChangeGiamGia()">
+      </div>
+      <div class="mb-3 mt-3 col-5">
+        <label for="" class="form-label">Giá trước đó</label>
+        <input type="number" class="form-control" placeholder="" ng-model="old" ng-change="onChangeGiamGia()">
+      </div>
+      <div class="mb-3 mt-3 col-2">
+        <label for="" class="form-label">Giảm giá (%)</label>
+        <input type="number" class="form-control" placeholder=""
+          value="{{ketquaGIAM}}" disabled>
+
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="" class="form-label mb-3">Dung lượng (GB)</label>
+        <br>
+        <div>
+          <!-- <input class="form-check-input" type="checkbox" ng-model="all">
+          <label class="form-check-label">Tất cả</label> -->
+          <div class="form-check form-check-inline mx-2" ng-repeat="size in [32, 64, 128, 256, 512, 1024]">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox{{size}}" value="{{size}}"
+              ng-click="toggleCheckbox(size)" ng-checked="all">
+            <label class="form-check-label" for="inlineCheckbox{{size}}">{{size}}</label>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="mb-3 mt-3">
+        <label for="" class="form-label">Màu sắc</label>
+        <div ng-repeat="color in colors track by $index" class="row mt-3">
+          <div class="col-10">
+          <input type="text" class="form-control" placeholder="" ng-model="colors[$index]">
+          </div>
+          <button type="button" class="btn btn-danger col-2" ng-click="removeColor($index)">Xóa</button>
+        </div>
+        <button type="button" class="btn btn-primary mt-3" ng-click="addColor()">Thêm màu sắc</button>
+      </div>
+      
+      <div class="mb-3 mt-3">
+        <label for="" class="form-label">Đường dẫn ảnh</label>
+        <div ng-repeat="i in imgList track by $index" class="row mt-2">
+          <div class="col-10">
+            <input type="text" class="form-control" placeholder="" ng-model="imgList[$index]">
+          </div>
+          <button type="button" class="btn btn-danger col-2" ng-click="removeImg($index)">Xóa</button>
+        </div>
+        <button type="button" class="btn btn-primary mt-3 mb-3" ng-click="addImg()">Thêm ảnh</button>
+        <div class="row">
+          <div class="col-3 mt-3" ng-repeat="i in imgList track by $index">
+            <img src="{{i}}" alt="" class="img-fluid w-75 img-thumbnail">
+          </div>
+        </div>
+        
+      </div>
+      <div class="mb-3 mt-3">
+        <label for="" class="form-label">Mô tả</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ng-model="content"></textarea>
+      </div>
+    </div>
+
+    <button ng-click="create()" type="button" class="btn btn-primary"><i class="fa-solid fa-plus"></i><span
+        class="p-2">Thêm sản phẩm</span></button>
+  </form>
+</div>

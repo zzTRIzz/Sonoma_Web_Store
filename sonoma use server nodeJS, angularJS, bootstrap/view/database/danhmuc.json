@@ -1,0 +1,74 @@
+{
+    "danhmuc": [
+    {
+      "trangchu": [
+        {
+          "tilte": "Điện thoại",
+          "to": "#"
+        },
+        {
+          "tilte": "Về chúng tôi",
+          "to": "#"
+        },
+        {
+          "tilte": "Liên hệ",
+          "to": "#"
+        }
+      ],
+      "dienthoai": [
+        {
+          "tilte": "iPhone",
+          "to": "#"
+        },
+        {
+          "tilte": "Xiaomi",
+          "to": "#"
+        },
+        {
+          "tilte": "Oppo",
+          "to": "#"
+        },
+        {
+          "tilte": "Samung",
+          "to": "#"
+        }
+      ],
+      "maytinhbang": [
+        {
+          "tilte": "iPad",
+          "to": "#"
+        },
+        {
+          "tilte": "Samung",
+          "to": "#"
+        },
+        {
+          "tilte": "Xiaomi",
+          "to": "#"
+        },
+        {
+          "tilte": "Huawei",
+          "to": "#"
+        }
+      ],
+      "maytinhxachtay": [
+        {
+          "tilte": "Macbook",
+          "to": "#"
+        },
+        {
+          "tilte": "Dell",
+          "to": "#"
+        },
+        {
+          "tilte": "Lenovo",
+          "to": "#"
+        },
+        {
+          "tilte": "HP",
+          "to": "#"
+        }
+      ]
+    }
+  ]
+}

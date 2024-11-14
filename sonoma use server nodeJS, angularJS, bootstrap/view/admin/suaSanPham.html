@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <h3 class="fw-bold mb-4">Sửa sản phẩm</h3>
+  <form>
+      <div class="mb-3 mt-3">
+          <label for="productName" class="form-label">Tên sản phẩm</label>
+          <input type="text" class="form-control" id="productName" ng-model="product.name">
+      </div>
+      <div class="mb-3 mt-3">
+          <label for="productType" class="form-label">Loại sản phẩm</label>
+          <select class="form-select" id="productType" ng-model="product.type">
+              <!-- Thêm options cho loại sản phẩm -->
+          </select>
+      </div>
+      <div class="mb-3 mt-3">
+          <label for="productCapacity" class="form-label">Dung lượng</label>
+          <input type="text" class="form-control" id="productCapacity" ng-model="product.capacity">
+      </div>
+      <div class="mb-3 mt-3">
+          <label for="productDescription" class="form-label">Mô tả</label>
+          <textarea class="form-control" id="productDescription" rows="3" ng-model="product.description"></textarea>
+      </div>
+      <!-- Thêm các trường thông tin khác cần thiết -->
+
+      <!-- Nút cập nhật sản phẩm -->
+      <button type="button" class="btn btn-primary" ng-click="updateProduct()">Cập nhật sản phẩm</button>
+  </form>
+</div>
